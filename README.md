@@ -24,7 +24,8 @@ Windows:
 
 # License
 
-CC BY 3.0  <http://creativecommons.org/licenses/by/3.0/>
+Copyright (C) 2002-2012 by Alex Chaffee
+under CC BY 3.0 license <http://creativecommons.org/licenses/by/3.0/>
 
 Summary: You are free:
 
