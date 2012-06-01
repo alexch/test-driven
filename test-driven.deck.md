@@ -16,7 +16,24 @@ alex @ stinky.com
 
 # Red, Green, Refactor
 
+* First, write a test and watch it fail
+  * Make sure it's failing for the right reason!
+* Next, write just enough code to make it pass
+  * Enjoy the green!
+* Finally, look at your code (and your test!) and see if you can clean it up
+  * change names
+  * remove duplication
+  * extract methods
+
+# Make it green, then make it clean
+
 ![Make it green](make-it-green.png)
+
+# Addicted to green
+
+* You get a little rush every time a new test passes
+* Steady, incremental feeling of progress
+* Don't write code all day without knowing if it works
 
 # Three As
 
@@ -204,7 +221,7 @@ alex @ stinky.com
 
 * Need to spend time on infrastructure, fixtures, getting comfortable with TDD
 * Business case for TDD: sustainable velocity
-  * for feature velocity, stabilty > early oomph Famous graph
+  * for feature velocity, stabilty > early oomph
 * Famous Graph
 
 <!-- # TDD vs TDD
@@ -321,7 +338,7 @@ Step two:
 BDD can help...
 
     describe Set do
-      context "when new" do
+      context "when newly created" do
         subject { Set.new }
         it { should be_empty }
       end
@@ -434,15 +451,14 @@ vs.
 
 # Regression Test
 
-* When a defect is reported, write the smallest possible test that fails
+> "Regression tests are tests that you would have written originally." - Kent Beck
+
 * When a bug is reported, the first step is to write a (failing) test that reproduces the bug
-* Fix the bug by writing code to make the test run successfully
+* Fix the bug by writing code until the test passes
 * Verify the bug in the running application
-* Add the bug test to the automated suite
-* Check in the bugfix code and test
+* Check in the bugfix test and code
 * Now it's always run – instant regression test!
-> "Regression tests are test that you would have written originallly." - Kent Beck
-* May also want to write a failing Acceptance Test, but that's optional -- you definitely want a failing unit test too
+* If your regression test is high-level (e.g. Selenium), you probably want a failing unit test too
 
 # Do Over
 * Often the best thing to do is throw away your work and start again
@@ -452,7 +468,6 @@ vs.
 * Based on writer's trick: start a sentence and leave it unfinished
 
 # The Need For Speed
-
 * Tests are only valuable if they're run all the time
 * If they're slow, people will not want to run them all the time
 * So keep them fast!
